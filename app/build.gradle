@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'LoanCalc'
+            keyPassword 'sivarock5'
+            storeFile file('C:/Users/sivarock/.android/debug.keystore')
+            storePassword 'sivarock5'
+        }
+    }
+    compileSdkVersion 24
+    buildToolsVersion "24"
+    defaultConfig {
+        applicationId "com.loancalc.dtailcode.loancalc"
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 4
+        versionName "2.2"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:24.1.1'
+
+
+}

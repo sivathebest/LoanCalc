@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LoanCalc</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="banner_ad_unit_id">ca-app-pub-6658651534850236/8710703709</string>
+</resources>

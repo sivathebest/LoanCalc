@@ -60,7 +60,9 @@ public class Home extends AppCompatActivity {
         });
 
 
-
+        /*
+         * this is text watcher for Total Amount EditText
+            */
         amt.addTextChangedListener(new TextWatcher() {
 
             @Override
@@ -84,6 +86,9 @@ public class Home extends AppCompatActivity {
             }
         });
 
+        /*
+         * this is text watcher for interest EditText
+            */
         interest.addTextChangedListener(new TextWatcher() {
 
             @Override
@@ -106,6 +111,10 @@ public class Home extends AppCompatActivity {
 
             }
         });
+
+        /*
+         * this is text watcher for Dues EditText
+            */
 
         dues.addTextChangedListener(new TextWatcher() {
 

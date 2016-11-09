@@ -1,12 +1,13 @@
 package com.loancalc.dtailcode.loancalc;
 
-import android.app.Activity;
+
 import android.os.Bundle;
 import android.content.Intent;
-import android.view.Menu;
+import android.support.v7.app.AppCompatActivity;
+
 import android.widget.ImageView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
     ImageView b;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +18,7 @@ public class MainActivity extends Activity {
         Thread thread=new Thread() {
             public void run() {
                 try {
-                    Thread.sleep(3500);
+                    Thread.sleep(500);
                     startActivity(new Intent(MainActivity.this, Home.class));
 
 //					overridePendingTransition(R.anim.slide_in_left,

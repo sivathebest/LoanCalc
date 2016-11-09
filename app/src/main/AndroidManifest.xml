@@ -24,6 +24,7 @@
         </activity>
         <activity
             android:name=".Home"
+            android:theme="@style/App_Action"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
         </activity>

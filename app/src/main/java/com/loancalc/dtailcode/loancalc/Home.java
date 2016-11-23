@@ -235,6 +235,9 @@ public class Home extends AppCompatActivity {
         mAdView.loadAd(adRequest);*/
 
     }
+     /*
+         * this is cal method, whenever textwatcher listen this will excute.
+            */
 
     public void cal(){
 

@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         b = (ImageView) findViewById(R.id.image_mainscreen);
 
+        // Timer for splash screen. 
+
         Thread thread=new Thread() {
             public void run() {
                 try {

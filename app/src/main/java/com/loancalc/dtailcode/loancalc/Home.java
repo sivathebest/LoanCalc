@@ -45,6 +45,10 @@ public class Home extends AppCompatActivity {
         due_12 = (Button) findViewById(R.id.due_12);
         due_18 = (Button) findViewById(R.id.due_18);
         due_24 = (Button) findViewById(R.id.due_24);
+        
+        /**
+         * Clear button on click listeners.
+         */
 
         r1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -231,6 +235,9 @@ public class Home extends AppCompatActivity {
         mAdView.loadAd(adRequest);*/
 
     }
+     /*
+         * this is cal method, whenever textwatcher listen this will excute.
+            */
 
     public void cal(){
 

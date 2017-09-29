@@ -18,7 +18,7 @@ import android.widget.TextView;
 public class Home extends AppCompatActivity {
     ImageView b;
     EditText amt,interest,dues;
-    TextView t1,txt_16, txt_24, txt_27;
+    TextView t1,textView_interest_16, txt_24, txt_27;
     Button r1,r2,r3,due_6,due_10,due_12,due_18,due_24;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class Home extends AppCompatActivity {
         interest = (EditText) findViewById(R.id.editText2);
         dues = (EditText) findViewById(R.id.editText3);
         t1 = (TextView) findViewById(R.id.textView4);
-        txt_16 = (TextView) findViewById(R.id.res_16);
+        textView_interest_16 = (TextView) findViewById(R.id.res_16);
         txt_24 = (TextView) findViewById(R.id.res_24);
         txt_27 = (TextView) findViewById(R.id.res_27);
 
@@ -266,12 +266,12 @@ public class Home extends AppCompatActivity {
                 String tot1_16 = String.format("%.2f", tot_16);
                 String tot1_24 = String.format("%.2f", tot_24);
                 String tot1_27 = String.format("%.2f", tot_27);
-                txt_16.setText(""+tot1_16);
+                textView_interest_16.setText(""+tot1_16);
                 txt_24.setText(""+tot1_24);
                 txt_27.setText(""+tot1_27);
 
             }else {
-                txt_16.setText("0");
+                textView_interest_16.setText("0");
                 txt_24.setText("0");
                 txt_27.setText("0");
 
@@ -279,7 +279,7 @@ public class Home extends AppCompatActivity {
 
 
         }else{
-            txt_16.setText("0");
+            textView_interest_16.setText("0");
             txt_24.setText("0");
             txt_27.setText("0");
         }

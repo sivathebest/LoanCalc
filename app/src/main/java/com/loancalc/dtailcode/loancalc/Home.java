@@ -17,7 +17,7 @@ import android.widget.TextView;
  */
 public class Home extends AppCompatActivity {
     ImageView b;
-    EditText amt,interest,dues;
+    EditText amout,interest,dues;
     TextView t1,textView_interest_16, txt_24, txt_27;
     Button r1,r2,r3,due_6,due_10,due_12,due_18,due_24;
     @Override
@@ -25,7 +25,7 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
-        amt = (EditText) findViewById(R.id.editText1);
+        amout = (EditText) findViewById(R.id.editText1);
         interest = (EditText) findViewById(R.id.editText2);
         dues = (EditText) findViewById(R.id.editText3);
         t1 = (TextView) findViewById(R.id.textView4);
@@ -52,7 +52,7 @@ public class Home extends AppCompatActivity {
 
         r1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                amt.setText("");
+                amout.setText("");
                 cal();
             }
 
@@ -109,7 +109,7 @@ public class Home extends AppCompatActivity {
         /*
          * this is text watcher for Total Amount EditText
             */
-        amt.addTextChangedListener(new TextWatcher() {
+        amout.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void afterTextChanged(Editable s) {}
@@ -242,14 +242,14 @@ public class Home extends AppCompatActivity {
     public void cal(){
 
         String a="",i="",d="";
-        a = amt.getText().toString();
+        a = amout.getText().toString();
         i = interest.getText().toString();
         d = dues.getText().toString();
 
         if((a != null) && !(a.equals("")) && !(a.equals("0")))
         {
             if((d != null) && !(d.equals("")) && !(d.equals("0"))){
-                Double amt1 = Double.parseDouble(amt.getText().toString());
+                Double amt1 = Double.parseDouble(amout.getText().toString());
                 Double i3 = 24.0;
                 Double i1 = 18.0;
                 Double i5 = 27.0;
@@ -294,7 +294,7 @@ public class Home extends AppCompatActivity {
         {
             t1.setText("0");
         }else{
-            Double amt1 = Double.parseDouble(amt.getText().toString());
+            Double amt1 = Double.parseDouble(amout.getText().toString());
             Double i1 = Double.parseDouble(interest.getText().toString());
             Double d1 = Double.parseDouble(dues.getText().toString());
 

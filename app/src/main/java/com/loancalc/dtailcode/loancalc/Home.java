@@ -17,7 +17,7 @@ import android.widget.TextView;
  */
 public class Home extends AppCompatActivity {
     ImageView b;
-    EditText amout,interest,dues;
+    EditText amout,interest,numberOfDues;
     TextView t1,textView_interest_16, txt_24, txt_27;
     Button r1,r2,r3,due_6,due_10,due_12,due_18,due_24;
     @Override
@@ -27,7 +27,7 @@ public class Home extends AppCompatActivity {
 
         amout = (EditText) findViewById(R.id.editText1);
         interest = (EditText) findViewById(R.id.editText2);
-        dues = (EditText) findViewById(R.id.editText3);
+        numberOfDues = (EditText) findViewById(R.id.editText3);
         t1 = (TextView) findViewById(R.id.textView4);
         textView_interest_16 = (TextView) findViewById(R.id.res_16);
         txt_24 = (TextView) findViewById(R.id.res_24);
@@ -66,14 +66,14 @@ public class Home extends AppCompatActivity {
         });
         r3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                dues.setText("");
+                numberOfDues.setText("");
                 cal();
             }
 
         });
         due_6.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                dues.setText("6");
+                numberOfDues.setText("6");
                 cal();
             }
 
@@ -81,25 +81,25 @@ public class Home extends AppCompatActivity {
 
         due_10.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                dues.setText("10");
+                numberOfDues.setText("10");
                 cal();
             }
 
         });due_12.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                dues.setText("12");
+                numberOfDues.setText("12");
                 cal();
             }
 
         });due_18.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                dues.setText("18");
+                numberOfDues.setText("18");
                 cal();
             }
 
         });due_24.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                dues.setText("24");
+                numberOfDues.setText("24");
                 cal();
             }
 
@@ -159,10 +159,10 @@ public class Home extends AppCompatActivity {
         });
 
         /*
-         * this is text watcher for Dues EditText
+         * this is text watcher for numberOfDues EditText
             */
 
-        dues.addTextChangedListener(new TextWatcher() {
+        numberOfDues.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void afterTextChanged(Editable s) {}
@@ -244,7 +244,7 @@ public class Home extends AppCompatActivity {
         String a="",i="",d="";
         a = amout.getText().toString();
         i = interest.getText().toString();
-        d = dues.getText().toString();
+        d = numberOfDues.getText().toString();
 
         if((a != null) && !(a.equals("")) && !(a.equals("0")))
         {
@@ -254,7 +254,7 @@ public class Home extends AppCompatActivity {
                 Double i1 = 18.0;
                 Double i5 = 27.0;
 
-                Double d1 = Double.parseDouble(dues.getText().toString());
+                Double d1 = Double.parseDouble(numberOfDues.getText().toString());
 
                 Double amt2 = amt1/d1;
                 Double i2 = i1/12;
@@ -296,7 +296,7 @@ public class Home extends AppCompatActivity {
         }else{
             Double amt1 = Double.parseDouble(amout.getText().toString());
             Double i1 = Double.parseDouble(interest.getText().toString());
-            Double d1 = Double.parseDouble(dues.getText().toString());
+            Double d1 = Double.parseDouble(numberOfDues.getText().toString());
 
             Double amt2 = amt1/d1;
             Double i2 = i1/12;

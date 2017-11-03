@@ -18,7 +18,7 @@ import android.widget.TextView;
 public class Home extends AppCompatActivity {
     ImageView b;
     EditText amout,interest,numberOfDues;
-    TextView t1,textView_interest_16, txt_24, txt_27;
+    TextView textView1,textView_interest_16, txt_24, txt_27;
     Button r1,r2,r3,due_6,due_10,due_12,due_18,due_24;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class Home extends AppCompatActivity {
         amout = (EditText) findViewById(R.id.editText1);
         interest = (EditText) findViewById(R.id.editText2);
         numberOfDues = (EditText) findViewById(R.id.editText3);
-        t1 = (TextView) findViewById(R.id.textView4);
+        textView1 = (TextView) findViewById(R.id.textView4);
         textView_interest_16 = (TextView) findViewById(R.id.res_16);
         txt_24 = (TextView) findViewById(R.id.res_24);
         txt_27 = (TextView) findViewById(R.id.res_27);
@@ -211,7 +211,7 @@ public class Home extends AppCompatActivity {
                     Double i2 = i1/12;
                     Double tot = amt2 + ((amt1 * i2)/100);
                     String tot1 = String.format("%.2f", tot);
-                    t1.setText(""+tot1);
+                    textView1.setText(""+tot1);
 
                 }
 
@@ -286,13 +286,13 @@ public class Home extends AppCompatActivity {
 
         if((a == null) || (a.equals("")) || (a.equals("0")))
         {
-            t1.setText("0");
+            textView1.setText("0");
         }else if((i == null) || (i.equals("")) || (i.equals("0")))
         {
-            t1.setText("0");
+            textView1.setText("0");
         }else if((d == null) || (d.equals("")) || (d.equals("0")))
         {
-            t1.setText("0");
+            textView1.setText("0");
         }else{
             Double amt1 = Double.parseDouble(amout.getText().toString());
             Double i1 = Double.parseDouble(interest.getText().toString());
@@ -302,7 +302,7 @@ public class Home extends AppCompatActivity {
             Double i2 = i1/12;
             Double tot = amt2 + ((amt1 * i2)/100);
             String tot1 = String.format("%.2f", tot);
-            t1.setText(""+tot1);
+            textView1.setText(""+tot1);
 
         }
 

@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 /**
  * Created by sivarock on 8/1/2015.
+ * @version 2.0
  */
 public class Home extends AppCompatActivity {
     ImageView b;

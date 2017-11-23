@@ -19,7 +19,7 @@ import android.widget.TextView;
 public class Home extends AppCompatActivity {
     ImageView b;
     EditText amout,interest,numberOfDues;
-    TextView textView1,textView_interest_16, textView_interest_24, txt_27;
+    TextView textView1,textView_interest_16, textView_interest_24, textView_interest_27;
     Button r1,r2,r3,due_6,due_10,due_12,due_18,due_24;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

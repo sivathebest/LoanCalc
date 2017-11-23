@@ -32,7 +32,7 @@ public class Home extends AppCompatActivity {
         textView1 = (TextView) findViewById(R.id.textView4);
         textView_interest_16 = (TextView) findViewById(R.id.res_16);
         textView_interest_24 = (TextView) findViewById(R.id.res_24);
-        txt_27 = (TextView) findViewById(R.id.res_27);
+        textView_interest_27 = (TextView) findViewById(R.id.res_27);
 
         r1 = (Button) findViewById(R.id.resetbut1);
         r2 = (Button) findViewById(R.id.resetbut2);
@@ -269,12 +269,12 @@ public class Home extends AppCompatActivity {
                 String tot1_27 = String.format("%.2f", tot_27);
                 textView_interest_16.setText(""+tot1_16);
                 textView_interest_24.setText(""+tot1_24);
-                txt_27.setText(""+tot1_27);
+                textView_interest_27.setText(""+tot1_27);
 
             }else {
                 textView_interest_16.setText("0");
                 textView_interest_24.setText("0");
-                txt_27.setText("0");
+                textView_interest_27.setText("0");
 
             }
 
@@ -282,7 +282,7 @@ public class Home extends AppCompatActivity {
         }else{
             textView_interest_16.setText("0");
             textView_interest_24.setText("0");
-            txt_27.setText("0");
+            textView_interest_27.setText("0");
         }
 
         if((a == null) || (a.equals("")) || (a.equals("0")))

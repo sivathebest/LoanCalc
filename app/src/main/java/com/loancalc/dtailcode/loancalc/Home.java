@@ -26,7 +26,7 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
-        amout = (EditText) findViewById(R.id.editText1);
+        amount  = (EditText) findViewById(R.id.editText1);
         interest = (EditText) findViewById(R.id.editText2);
         numberOfDues = (EditText) findViewById(R.id.editText3);
         textView1 = (TextView) findViewById(R.id.textView4);
@@ -53,7 +53,7 @@ public class Home extends AppCompatActivity {
 
         r1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                amout.setText("");
+                amount .setText("");
                 cal();
             }
 
@@ -110,7 +110,7 @@ public class Home extends AppCompatActivity {
         /*
          * this is text watcher for Total Amount EditText
             */
-        amout.addTextChangedListener(new TextWatcher() {
+        amount .addTextChangedListener(new TextWatcher() {
 
             @Override
             public void afterTextChanged(Editable s) {}
@@ -243,14 +243,14 @@ public class Home extends AppCompatActivity {
     public void cal(){
 
         String a="",i="",d="";
-        a = amout.getText().toString();
+        a = amount .getText().toString();
         i = interest.getText().toString();
         d = numberOfDues.getText().toString();
 
         if((a != null) && !(a.equals("")) && !(a.equals("0")))
         {
             if((d != null) && !(d.equals("")) && !(d.equals("0"))){
-                Double amt1 = Double.parseDouble(amout.getText().toString());
+                Double amt1 = Double.parseDouble(amount .getText().toString());
                 Double i3 = 24.0;
                 Double i1 = 18.0;
                 Double i5 = 27.0;
@@ -295,7 +295,7 @@ public class Home extends AppCompatActivity {
         {
             textView1.setText("0");
         }else{
-            Double amt1 = Double.parseDouble(amout.getText().toString());
+            Double amt1 = Double.parseDouble(amount .getText().toString());
             Double i1 = Double.parseDouble(interest.getText().toString());
             Double d1 = Double.parseDouble(numberOfDues.getText().toString());
 
